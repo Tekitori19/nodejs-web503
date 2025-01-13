@@ -17,9 +17,9 @@ router.get('/products', (_req, res) => {
 
 router.get('/products/:id', (req, res) => {
     const id = parseInt(req.params.id)
-    console.log(id)
+    // console.log(id)
     const data = getProduct(id)
-    console.log(data)
+    // console.log(data)
     res.render('product', { layout: 'main', data: data })
 })
 
