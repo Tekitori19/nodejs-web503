@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài viết của tôi | MyBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Thêm Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-indigo-600">MyBlog</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="create-post.html"
+                        class="mr-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                        <i class="fas fa-plus mr-2"></i>
+                        Tạo bài viết mới
+                    </a>
+                    <div class="ml-3 relative group">
+                        <button type="button" class="flex items-center space-x-3">
+                            <span class="text-gray-700">DwcksDinh</span>
+                            <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="Avatar">
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="hidden group-hover:block absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hồ sơ của
+                                tôi</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Bài viết của
+                                tôi</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header Section -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">Bài viết của tôi</h1>
+            <div class="mt-4 flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Tìm kiếm bài viết..."
+                        class="w-96 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+                <select
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="all">Tất cả trạng thái</option>
+                    <option value="published">Đã đăng</option>
+                    <option value="draft">Bản nháp</option>
+                </select>
+                <select
+                    class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="newest">Mới nhất</option>
+                    <option value="oldest">Cũ nhất</option>
+                    <option value="most-viewed">Xem nhiều nhất</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Posts List -->
+        <div class="space-y-6">
+            <!-- Post Item 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2">
+                            <h2 class="text-xl font-semibold text-gray-900">
+                                <a href="#" class="hover:text-indigo-600">Hướng dẫn sử dụng Tailwind CSS trong dự án</a>
+                            </h2>
+                            <span class="px-2 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full">Đã
+                                đăng</span>
+                        </div>
+                        <p class="mt-2 text-gray-600 line-clamp-2">
+                            Tailwind CSS là một framework CSS utility-first giúp xây dựng giao diện nhanh chóng và dễ
+                            dàng tùy chỉnh...
+                        </p>
+                        <div class="mt-4 flex items-center space-x-4 text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>2025-01-21</span>
+                            <span><i class="far fa-eye mr-2"></i>1,234 lượt xem</span>
+                            <span><i class="far fa-comment mr-2"></i>23 bình luận</span>
+                        </div>
+                    </div>
+                    <div class="ml-6 flex items-center space-x-2">
+                        <a href="edit-post.html" class="p-2 text-gray-500 hover:text-indigo-600">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <button class="p-2 text-gray-500 hover:text-red-600">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Item 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2">
+                            <h2 class="text-xl font-semibold text-gray-900">
+                                <a href="#" class="hover:text-indigo-600">10 thủ thuật JavaScript cần biết</a>
+                            </h2>
+                            <span class="px-2 py-1 text-sm font-medium bg-yellow-100 text-yellow-800 rounded-full">Bản
+                                nháp</span>
+                        </div>
+                        <p class="mt-2 text-gray-600 line-clamp-2">
+                            JavaScript là ngôn ngữ lập trình phổ biến nhất hiện nay. Trong bài viết này, chúng ta sẽ tìm
+                            hiểu 10 thủ thuật...
+                        </p>
+                        <div class="mt-4 flex items-center space-x-4 text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>2025-01-20</span>
+                            <span><i class="far fa-eye mr-2"></i>Draft</span>
+                            <span><i class="far fa-comment mr-2"></i>0 bình luận</span>
+                        </div>
+                    </div>
+                    <div class="ml-6 flex items-center space-x-2">
+                        <a href="edit-post.html" class="p-2 text-gray-500 hover:text-indigo-600">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <button class="p-2 text-gray-500 hover:text-red-600">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Item 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2">
+                            <h2 class="text-xl font-semibold text-gray-900">
+                                <a href="#" class="hover:text-indigo-600">React vs Vue: Nên chọn Framework nào?</a>
+                            </h2>
+                            <span class="px-2 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full">Đã
+                                đăng</span>
+                        </div>
+                        <p class="mt-2 text-gray-600 line-clamp-2">
+                            So sánh chi tiết về ưu nhược điểm của hai framework front-end phổ biến nhất hiện nay...
+                        </p>
+                        <div class="mt-4 flex items-center space-x-4 text-sm text-gray-500">
+                            <span><i class="far fa-calendar mr-2"></i>2025-01-19</span>
+                            <span><i class="far fa-eye mr-2"></i>2,567 lượt xem</span>
+                            <span><i class="far fa-comment mr-2"></i>45 bình luận</span>
+                        </div>
+                    </div>
+                    <div class="ml-6 flex items-center space-x-2">
+                        <a href="edit-post.html" class="p-2 text-gray-500 hover:text-indigo-600">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <button class="p-2 text-gray-500 hover:text-red-600">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 flex justify-center">
+            <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                <a href="#"
+                    class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                    <span class="sr-only">Previous</span>
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a href="#"
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-indigo-600 hover:bg-gray-50">1</a>
+                <a href="#"
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                <a href="#"
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                <span
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">...</span>
+                <a href="#"
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">8</a>
+                <a href="#"
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">9</a>
+                <a href="#"
+                    class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">10</a>
+                <a href="#"
+                    class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                    <span class="sr-only">Next</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white mt-12">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 text-sm">
+                &copy; 2025 MyBlog. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
