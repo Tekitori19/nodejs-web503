@@ -2,9 +2,9 @@ import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 
 @Component({
-    selector: "mc-register",
-    templateUrl: "./register.component.html",
-    imports: [ReactiveFormsModule]
+  selector: "mc-register",
+  templateUrl: "./register.component.html",
+  imports: [ReactiveFormsModule]
 })
 export class RegisterComponent {
   form: FormGroup

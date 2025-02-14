@@ -1,4 +1,3 @@
-import { createAction } from '@ngrx/store'
+import { createAction } from "@ngrx/store";
 
-
-const register = createAction
+export const register = createAction('[Auth] Register');
