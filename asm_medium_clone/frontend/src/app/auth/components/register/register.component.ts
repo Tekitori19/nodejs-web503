@@ -4,21 +4,25 @@ import { Store } from "@ngrx/store";
 import { register } from "../../store/action";
 import { RegisterRequestInterface } from "../../types/registerRequest.interface";
 import { RouterLink } from "@angular/router";
+import { AuthStateInterface } from "../../types/authState.interface";
+import { selectIsSubmitting } from "../../store/reducer";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-register",
   templateUrl: "./register.component.html",
-  imports: [ReactiveFormsModule, RouterLink]
+  imports: [ReactiveFormsModule, RouterLink, CommonModule]
 })
 export class RegisterComponent {
   form: FormGroup
-
-  constructor(private fb: FormBuilder, private store: Store) {
+  isSubmitting$
+  constructor(private fb: FormBuilder, private store: Store<{ auth: AuthStateInterface }>) {
     this.form = this.fb.nonNullable.group({
       username: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required],
     })
+    this.isSubmitting$ = this.store.select(selectIsSubmitting)
   }
 
   onSubmit() {
