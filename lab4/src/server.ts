@@ -7,7 +7,7 @@ import router from './router/index.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-console.log(__dirname);
+// console.log(__dirname);
 
 const app = express();
 
@@ -23,6 +23,7 @@ const hbs = create({
 app.engine('.hbs', hbs.engine)
 app.set('view engine', '.hbs')
 app.set('views', __dirname + '/resources/views')
+app.use(express.json()) // Add this line to parse JSON request bodies
 
 app.use('/', router)
 

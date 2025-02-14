@@ -1,0 +1,23 @@
+{
+    "name": "lab5",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/app.ts",
+    "scripts": {
+        "dev": "tsx --env-file=.env --watch src/app.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/bcrypt": "^5.0.2",
+        "@types/express": "^5.0.0",
+        "bcrypt": "^5.1.1",
+        "express": "^4.21.2",
+        "mongoose": "^8.10.0",
+        "typescript": "^5.7.3"
+    },
+    "devDependencies": {
+        "tsx": "^4.19.2"
+    }
+}

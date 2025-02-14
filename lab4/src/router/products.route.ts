@@ -16,4 +16,13 @@ router.get('/:id', (req, res) => {
     res.render('product', { layout: 'main', data: data })
 })
 
+router.post('/:id', (req, res) => {
+    console.log(req.body)
+    res.json(req.body)
+})
+
+router.delete('/:id', (req, res) => {
+    res.json("it works")
+})
+
 export default router;
