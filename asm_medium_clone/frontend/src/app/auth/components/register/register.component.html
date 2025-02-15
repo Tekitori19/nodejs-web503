@@ -1,4 +1,3 @@
-{{isSubmitting$ | async}}
 <div class="auth-page">
   <div class="container page">
     <div class="row">
@@ -19,7 +18,7 @@
             <input type="password" class="form-control form-control-lg" placeholder="Password"
               formControlName="password" />
           </fieldset>
-          <button type="submit" class="btn btn-lg btn-primary pull-xs-right" [disabled]="isSubmitting$ | async">
+          <button type="submit" class="btn btn-lg btn-primary pull-xs-right">
             Sign Up
           </button>
         </form>
