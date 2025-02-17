@@ -1,0 +1,31 @@
+@host = localhost:5000
+
+
+###
+GET {{host}}/user
+
+
+###
+POST {{host}}/user
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "adx",
+    "email": "adx",
+    "password": "cad"
+}
+
+###
+PATCH {{host}}/user/67b39bc3120de6e9ab09e970
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "adc pro",
+    "email": "adc",
+    "password": "cad"
+}
+
+###
+DELETE {{host}}/post/67b39bc3120de6e9ab09e970

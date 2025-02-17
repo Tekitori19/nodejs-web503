@@ -1,0 +1,11 @@
+<h1 class="text-4xl font-bold mb-4">Welcome to Example App</h1>
+<p class="mb-4">This is the home page of your application. Use this space to introduce your app and provide some
+    information about its features and benefits.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {{#each data}}
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-2">{{title}}</h2>
+        <p class="text-gray-700">{{desc}}</p>
+    </div>
+    {{/each}}
+</div>
