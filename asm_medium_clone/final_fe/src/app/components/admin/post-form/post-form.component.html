@@ -1,0 +1,27 @@
+<div>
+  <h2>{{isEditing ? 'Edit' : 'Create'}} Post</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Title:</label>
+      <input type="text" [(ngModel)]="post.title" name="title" required>
+    </div>
+
+    <div>
+      <label>Category:</label>
+      <select [(ngModel)]="post.category" name="category" required>
+        <option value="">Select Category</option>
+        <option *ngFor="let category of categories" [value]="category">
+          {{category}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label>Content:</label>
+      <textarea [(ngModel)]="post.content" name="content" required rows="10"></textarea>
+    </div>
+
+    <button type="submit">{{isEditing ? 'Update' : 'Create'}} Post</button>
+    <button type="button" routerLink="/admin/posts">Cancel</button>
+  </form>
+</div>

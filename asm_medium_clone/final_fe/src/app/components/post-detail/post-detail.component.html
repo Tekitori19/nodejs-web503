@@ -1,0 +1,12 @@
+<div *ngIf="post">
+  <h1>{{post.title}}</h1>
+  <p>Category: {{post.category}}</p>
+  <p>Author: {{post.author}}</p>
+  <p>Date: {{post.createdAt | date}}</p>
+  <div>{{post.content}}</div>
+  <a routerLink="/">Back to Home</a>
+</div>
+<div *ngIf="!post">
+  <p>Post not found</p>
+  <a routerLink="/">Back to Home</a>
+</div>
