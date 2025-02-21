@@ -1,0 +1,31 @@
+@host = localhost:5000
+
+###
+POST {{host}}/user/signup
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "adc",
+    "password": "adc"
+}
+
+###
+POST {{host}}/user/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "adx",
+    "password": "cad"
+}
+
+###
+POST {{host}}/user/logout
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "adx",
+    "password": "cad"
+}

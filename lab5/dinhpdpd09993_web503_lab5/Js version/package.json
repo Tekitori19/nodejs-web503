@@ -1,0 +1,22 @@
+{
+    "name": "lab5_vanillajs_version",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "config": "^3.3.12",
+        "express": "^4.21.2",
+        "express-handlebars": "^8.0.1",
+        "method-override": "^3.0.0",
+        "mongoose": "^8.10.1",
+        "nodemon": "^3.1.9"
+    }
+}

@@ -1,0 +1,36 @@
+@host = localhost:5000
+@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkeCIsInVzZXJJZCI6IjY3YjM5YmMzMTIwZGU2ZTlhYjA5ZTk3MCIsImlhdCI6MTc0MDE1Mzc5NywiZXhwIjoxNzQwMTU3Mzk3fQ.AnTM1vcHyBOLyiaLbk1JTBDd577lrB-qMl47DuGjPQ0 
+
+
+GET {{host}}/post
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+POST {{host}}/post
+Accept: application/json
+Content-Type: application/json
+
+{
+    "title": "adx",
+    "desc": "adx",
+    "imgPath": "cad"
+}
+
+###
+PATCH {{host}}/post/67b39310761430153fe50f82
+Accept: application/json
+Content-Type: application/json
+
+{
+    "title": "adc pro",
+    "desc": "adc",
+    "imgPath": "cad"
+}
+
+###
+DELETE {{host}}/post/67b39310761430153fe50f82
+
+
+###
+GET https://jsonplaceholder.typicode.com/posts
