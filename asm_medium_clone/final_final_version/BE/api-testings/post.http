@@ -1,0 +1,55 @@
+@host = localhost:5000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YmNjYjViYWJhYmViZmRlNjUzMGY5MSIsImlhdCI6MTc0MDQyNzA4MH0.rYaBjpFXqgKZEk22q90A_0lNCYTo5hbtcL20iwYFfgs
+GET {{host}}/post
+
+###
+POST {{host}}/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "123456",
+    "description": "test"
+}
+
+###
+POST {{host}}/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "123456",
+    "description": "test"
+}
+
+###
+POST {{host}}/post
+Accept: application/json
+Content-Type: application/json
+Authorization:  {{token}}
+
+{
+    "title": "test",
+    "content": "test"
+}
+
+###
+PUT {{host}}/post/67bcccb1438a521eb2b2e23e
+Accept: application/json
+Content-Type: application/json
+Authorization:  {{token}}
+
+{
+    "title": "test",
+    "content": "update2"
+}
+
+###
+DELETE {{host}}/post/67bccf687da920fdad8e7ed8
+Authorization:  {{token}}
+
+###
+GET {{host}}/post/67bc186f6783e5926526d746
+Authorization:  {{token}}

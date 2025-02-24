@@ -1,0 +1,33 @@
+ .search-container {
+     padding: 20px;
+ }
+
+ .search-input {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 20px;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+     font-size: 16px;
+ }
+
+ .posts-list {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+ }
+
+ .post-item {
+     padding: 15px;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+ }
+
+ .post-item h3 {
+     margin: 0 0 10px 0;
+ }
+
+ .post-item p {
+     margin: 0;
+     color: #666;
+ }

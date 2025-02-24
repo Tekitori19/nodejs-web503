@@ -1,0 +1,27 @@
+@host = localhost:5000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YmNjYjViYWJhYmViZmRlNjUzMGY5MSIsImlhdCI6MTc0MDQyNzA4MH0.rYaBjpFXqgKZEk22q90A_0lNCYTo5hbtcL20iwYFfgs
+@post_id = 67bc186f6783e5926526d746
+@comment_id = 67bcd0777da920fdad8e7eeb
+
+POST {{host}}/post/{{post_id}}/comment
+Accept: application/json
+Content-Type: application/json
+Authorization:  {{token}}
+
+{
+    "content": "test comment"
+}
+###
+
+PUT {{host}}/post/{{post_id}}/comment/{{comment_id}}
+Accept: application/json
+Content-Type: application/json
+Authorization:  {{token}}
+
+{
+    "content": "update comment"
+}
+###
+
+DELETE {{host}}/post/{{post_id}}/comment/{{comment_id}}
+Authorization:  {{token}}
